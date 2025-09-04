@@ -1,0 +1,6 @@
+{
+  "interval_seconds": 60,
+  "api_base": "https://api.juk.re",
+  "token_update": "SEU_TOKEN_AQUI",
+  "api_key": ""
+}

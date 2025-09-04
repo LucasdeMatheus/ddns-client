@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+    "${workspaceFolder}/includes",
+    "${workspaceFolder}/src",
+    "${workspaceFolder}/src/config",
+    "${workspaceFolder}/src/updater",
+    "${workspaceFolder}/src/httpClient",
+    "${workspaceFolder}/src/logger",
+    "${workspaceFolder}/src/dnsService",
+    "${workspaceFolder}/curl-8.15.0_7-win64-mingw/include"
+],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/mingw64/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

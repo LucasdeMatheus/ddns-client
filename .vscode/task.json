@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build DDNS Client",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "-std=c++17",
+                "-I", "C:/Users/ffgus/Desktop/ddns-client/src",
+                "-I", "C:/Users/ffgus/Desktop/ddns-client/includes",
+                "-I", "C:/MinGW/bin/curl-8.15.0_7-win64-mingw/include",
+                "C:/Users/ffgus/Desktop/ddns-client/src/main.cpp",
+                "C:/Users/ffgus/Desktop/ddns-client/src/config/Config.cpp",
+                "C:/Users/ffgus/Desktop/ddns-client/src/updater/Updater.cpp",
+                "C:/Users/ffgus/Desktop/ddns-client/src/httpClient/HttpClient.cpp",
+                "C:/Users/ffgus/Desktop/ddns-client/src/logger/Logger.cpp",
+                "-L", "C:/MinGW/bin/curl-8.15.0_7-win64-mingw/lib",
+                "-lcurl",
+                "-o", "C:/Users/ffgus/Desktop/ddns-client/src/output/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila todo o DDNS Client com g++"
+        }
+    ]
+}
