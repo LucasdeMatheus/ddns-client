@@ -21,7 +21,7 @@ bool Updater::updateHost(const DnsHost& host, const std::string& apiKey) {
     // Chamada GET passando o header X-API-KEY
     // O HttpClient precisa suportar vetor de headers
     if (!httpClient.get(url, response, error, { "X-API-KEY: " + apiKey })) {
-        Logger::log(LogLevel::ERROR, "Falha ao atualizar host " + host.fqdn + ": " + error);
+        Logger::log(LogLevel::LOG_ERROR, "Falha ao atualizar host " + host.fqdn + ": " + error);
         return false;
     }
 

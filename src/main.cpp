@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <thread>
 #include <vector>
@@ -13,8 +14,8 @@ int main()
     Logger::log(LogLevel::INFO, "Iniciando cliente DDNS...");
 
     Config config;
-    if (!config.load("../config.json")) {
-        Logger::log(LogLevel::ERROR, "Falha ao carregar configuração.");
+    if (!config.load("C:\\ProgramData\\ddns-service\\config.json")) {
+        Logger::log(LogLevel::LOG_ERROR, "Falha ao carregar configuração.");
         std::cout << "Falha ao carregar config.json. Pressione Enter para sair...";
         std::cin.get();
         return 1;
@@ -45,7 +46,7 @@ int main()
     std::string error;
 
     if (!dnsService.listHosts(dnsHosts, error)) {
-        Logger::log(LogLevel::ERROR, "Erro ao listar hosts: " + error);
+        Logger::log(LogLevel::LOG_ERROR, "Erro ao listar hosts: " + error);
         std::cout << "Erro ao listar hosts: " << error << "\nPressione Enter para sair...";
         std::cin.get();
         return 1;
@@ -61,7 +62,7 @@ int main()
 
     std::cout << "Hosts existentes:\n";
     for (auto& h : dnsHosts) {
-        std::cout << h.id << " - " << h.fqdn << "\n";
+        std::cout << h.id << " - " << h.fqdn << " - " << h.token_update << "\n";
     }
 
     // Pergunta qual host atualizar

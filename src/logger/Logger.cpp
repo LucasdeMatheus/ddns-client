@@ -8,7 +8,7 @@ void Logger::log(LogLevel level, const std::string& message) {
     switch (level) {
         case LogLevel::INFO: levelStr = "INFO"; break;
         case LogLevel::WARNING: levelStr = "WARNING"; break;
-        case LogLevel::ERROR: levelStr = "ERROR"; break;
+        case LogLevel::LOG_ERROR: levelStr = "ERROR"; break;
     }
 
     std::time_t now = std::time(nullptr);
